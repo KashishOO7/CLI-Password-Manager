@@ -29,10 +29,10 @@ You can customize and add more features as you'd like. Feel free to contribute a
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/your-username/local-vault.git
-   cd local-vault```
-
-
+   git clone https://github.com/KashishOO7/CLI-Password-Manager.git
+   cd local-vault
+   ```
+   
 2. **Install dependancies**
     ```python
         pip install -r requirements.txt
@@ -41,7 +41,7 @@ You can customize and add more features as you'd like. Feel free to contribute a
 3. **Before running the Program**
     - 
 
-4. **GitHub Sync Setup**
+  **GitHub Sync Setup**
  - Create a New Private Repository on GitHub:
  - Set Up Local Repository:
 
