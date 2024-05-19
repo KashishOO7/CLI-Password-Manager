@@ -35,28 +35,25 @@ You can customize and add more features as you'd like. Feel free to contribute a
    
 2. **Install dependancies**
     ```python
-        pip install -r requirements.txt
+    pip install -r requirements.txt
     ```
 
 3. **Before running the Program**
-    - 
 
   **GitHub Sync Setup**
  - Create a New Private Repository on GitHub:
  - Set Up Local Repository:
 
-    git init
-    git remote add origin https://github.com/your-username/local-vault.git # Change this to your private repo URL
+ - git init
+ - git remote add origin https://github.com/your-username/local-vault.git # Change this to your private repo URL
+ - Commit and Push Initial Changes:
+ - git add .
+ - git commit -m "Initial commit"
+ - git push -u origin master
+ 
+ - If you face any error while pushing or unable to see result reflected on your repo then, you might need to mess around your repo settings a little. 
 
-    Commit and Push Initial Changes:
-
-    git add .
-    git commit -m "Initial commit"
-    git push -u origin master
-
-    If you face any error while pushing or unable to see result reflected on your repo then, you might need to mess around your repo settings a little. 
-
-    Change default branch from your repo settings, if not same.
+ - Change default branch from your repo settings, if not same.
 
 4. Search for "Path to your local git" in the main.py and set it.
 
