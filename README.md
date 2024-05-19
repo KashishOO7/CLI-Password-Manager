@@ -46,7 +46,8 @@ You can customize and add more features as you'd like. Feel free to contribute a
 
  - git init
  - git remote add origin https://github.com/your-username/local-vault.git # Change this to your private repo URL
- - Commit and Push Initial Changes:
+ - Commit and Push Initial Changes: # after storing your passwords and notes in your database (.db)
+
  - git add .
  - git commit -m "Initial commit"
  - git push -u origin master
