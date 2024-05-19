@@ -1,0 +1,5 @@
+cryptography
+gitpython
+secretstorage
+sqlite3
+getpass
