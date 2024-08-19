@@ -1,0 +1,6 @@
+cryptography
+gitpython
+secrets
+requests
+playsound==1.2.2
+rich

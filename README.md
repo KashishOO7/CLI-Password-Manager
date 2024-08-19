@@ -1,19 +1,23 @@
-# Password-manager with encrypted database that supports remote sync via GitHub and Git
-
-# Local Vault 1.0
-
-Local Vault 1.0 is a secure password manager that helps you store, retrieve, and manage your passwords locally. It has encrypted database, a master password for added security, and an optional self-destruct mechanism after multiple failed attempts.
-
-You can customize and add more features as you'd like. Feel free to contribute and provide feedback.
+# Password Vault 1.0
+Welcome to Password Vault 1.0 — your secure digital locker for passwords and secret notes! This tool offers tight security, password storage, random password generation, secret note storage, and syncing your data securely to your private GitHub repository.
 
 ## Features
 
 - **Master Password**: Secure all your data with a single master password.
-- **Add Passwords**: Store service credentials securely.
-- **Retrieve Passwords**: Access your stored passwords. Or edit them.
-- **Generate Random Passwords**: Create strong, random passwords.
-- **Sync to GitHub**: Backup your encrypted database to a GitHub repository using git.
-- **Secret Notes**: Store and manage encrypted secret notes with timestamps.
+
+- **Password Storage**: Store your passwords securely using encryption that includes service, URL, username, notes.
+
+- **Retrieve Passwords**: Access your stored Data. Or edit them.
+
+- **Password Breach Check**: Check your password against known breaches using the Have I Been Pwned (HIBP) API.
+
+- **Secret Notes**: Store secret notes that are encrypted and timestamped.
+
+- **Random Password Generator**: Create complex passwords with just a click.
+
+- **Security Features**: Optional self-destruction of the database after 5 failed login attempts.
+
+- **GitHub Sync**: Backup your encrypted database to a private GitHub repository.
 
 ## Setup
 
@@ -21,41 +25,60 @@ You can customize and add more features as you'd like. Feel free to contribute a
 
 - Python 3.6 or higher
 - Git
-- SQLite3
-- GitHub account with a private repository
-- Will to learn and make this code better.
+- pip
 
 ### Installation
 
 1. **Clone the Repository**:
-   ```bash
-   git clone https://github.com/KashishOO7/CLI-Password-Manager.git
-   cd local-vault
-   ```
-   
+
+    * Open a terminal or command prompt.
+    * Clone the repository from GitHub:
+
+    ```bash
+    git clone https://github.com/yourusername/password-vault.git
+    ```
+
+    ```bash
+    cd password-vault
+    ```
+
+
 2. **Install dependancies**
     ```python
     pip install -r requirements.txt
     ```
 
-3. **Before running the Program**
+3. **Setting Up a Private GitHub Repository**
+    - You’ll need to set up a private GitHub repository where the encrypted database will be stored.
 
-  **GitHub Sync Setup**
- - Create a New Private Repository on GitHub:
- - Set Up Local Repository:
+    * Log in to GitHub and create a new private repository.
+    * After creating the repository, initialize it locally by linking your local folder to the remote repository:
+    
+    
+    ```bash
+    git remote add origin https://github.com/yourusername/private-repo.git
+    ```
 
- - git init
- - git remote add origin https://github.com/your-username/local-vault.git # Change this to your private repo URL
- - Commit and Push Initial Changes: # after storing your passwords and notes in your database (.db)
+    * Make your first commit to this private repo:
 
- - git add .
- - git commit -m "Initial commit"
- - git push -u origin master
- 
- - If you face any error while pushing or unable to see result reflected on your repo then, you might need to mess around your repo settings a little. 
+    ```bash
+    git add .
+    git commit -m "Initial commit for Password Vault"
+    git push -u origin master
+    ```
 
- - Change default branch from your repo settings, if not same.
+4. **Running the Application**
+    - Run the main Python file:
 
-4. Search for "Path to your local git" in the main.py and set it.
+        ```bash
+        python main.py
+        ```
 
-5. Set the name of your database you wish to create. Search for "Path to your database file"
+    - On the first run, you'll be asked to set a master password. This master password will protect all your other passwords and secret notes.
+
+    - You'll also have the option to enable the security feature that deletes the database after 5 failed login attempts.
+    
+5. **Edits You need to make**
+    - Search for "Path to your local git" in the main.py and point in to yours.
+
+    - Set the name of your database you wish to create. Search for "Path to your database file"
