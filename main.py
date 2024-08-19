@@ -55,7 +55,7 @@ def access_granted_sound():
     winsound.Beep(1000, 500)
 
 def access_denied_sound():
-    path1 = 'D:/codes/Projects/pass_man_GUI/media/warning.mp3'
+    path1 = 'media/warning.mp3'
     playsound(path1)
 
 def prompt_sound():
